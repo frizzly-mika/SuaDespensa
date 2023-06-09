@@ -6,13 +6,16 @@ abstract class Produto {
 	private int qtd;
 	private String dataFabricacao;
 	private String dataVencimento;
-	// private int categoria;
+	private String marca;
 
-//	public Produto(String nome, int qtd) {
-//		this.nome = nome;
-//		this.qtd = qtd;
-//		// this.categoria = categoria;
-//	}
+	public Produto(String nome, int qtd, String dataFabricacao, String dataVencimento, String marca) {
+		super();
+		this.nome = nome;
+		this.qtd = qtd;
+		this.dataFabricacao = dataFabricacao;
+		this.dataVencimento = dataVencimento;
+		this.marca = marca;
+	}
 
 	public String getNome() {
 		return nome;
@@ -46,12 +49,12 @@ abstract class Produto {
 		this.dataVencimento = dataVencimento;
 	}
 
-//	public int getCategoria() {
-//		return categoria;
-//	}
-//
-//	public void setCategoria(int categoria) {
-//		this.categoria = categoria;
-//	}
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
 
 }

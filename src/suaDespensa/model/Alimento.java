@@ -5,8 +5,9 @@ public class Alimento extends Produto {
 	private String tipo;
 	private String sabor;
 
-	public Alimento(String tipo, String sabor) {
-		super();
+	public Alimento(String nome, int qtd, String dataFabricacao, String dataVencimento, String marca, String tipo,
+			String sabor) {
+		super(nome, qtd, dataFabricacao, dataVencimento, marca);
 		this.tipo = tipo;
 		this.sabor = sabor;
 	}
