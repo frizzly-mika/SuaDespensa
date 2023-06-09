@@ -2,24 +2,24 @@ package suaDespensa.model;
 
 public class Bebida extends Produto {
 
-	private String sabor;
+	private int tipo;
 	private boolean alcoolico;
 
-	public Bebida(String nome, int qtd, String dataFabricacao, String dataVencimento, String marca, String sabor,
-			boolean alcoolico) {
-		super(nome, qtd, dataFabricacao, dataVencimento, marca);
-		this.sabor = sabor;
+	public Bebida(String nome, int qtd, int categoria) {
+		super(nome, qtd, categoria);
+		this.tipo = tipo;
 		this.alcoolico = alcoolico;
+		
 	}
 
-	public String getSabor() {
-		return sabor;
+	public int getTipo() {
+		return tipo;
 	}
 
-	public void setSabor(String sabor) {
-		this.sabor = sabor;
+	public void setTipo(int tipo) {
+		this.tipo = tipo;
 	}
-
+	
 	public boolean isAlcoolico() {
 		return alcoolico;
 	}

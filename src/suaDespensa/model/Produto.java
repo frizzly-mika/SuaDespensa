@@ -1,20 +1,15 @@
 package suaDespensa.model;
 
-abstract class Produto {
+public class Produto {
 
 	private String nome;
 	private int qtd;
-	private String dataFabricacao;
-	private String dataVencimento;
-	private String marca;
+	private int categoria;
 
-	public Produto(String nome, int qtd, String dataFabricacao, String dataVencimento, String marca) {
-		super();
+	public Produto(String nome, int qtd, int categoria) {
 		this.nome = nome;
 		this.qtd = qtd;
-		this.dataFabricacao = dataFabricacao;
-		this.dataVencimento = dataVencimento;
-		this.marca = marca;
+		this.categoria = categoria;
 	}
 
 	public String getNome() {
@@ -33,28 +28,41 @@ abstract class Produto {
 		this.qtd = qtd;
 	}
 
-	public String getDataFabricacao() {
-		return dataFabricacao;
+	public int getCategoria() {
+		return categoria;
 	}
 
-	public void setDataFabricacao(String dataFabricacao) {
-		this.dataFabricacao = dataFabricacao;
+	public void setCategoria(int categoria) {
+		this.categoria = categoria;
 	}
-
-	public String getDataVencimento() {
-		return dataVencimento;
+	
+	
+	public void mostrar() {
+		
+		String categoria = "";
+		
+		switch(this.categoria) {
+		case 1:
+			categoria = "Não Perecível";
+		break;
+		case 2:
+			categoria = "Bebida";
+		break;
+		}
+		
+		System.out.println("*****************************************************");
+		System.out.println("                                                     ");
+		System.out.println("                    Ítens na Sua Despensa                     ");
+		System.out.println("                                                     ");
+		System.out.println("*****************************************************");
+		System.out.println("                                                     ");
+		System.out.println("Nome: " + this.nome);
+		System.out.println("Qtd: " + this.qtd);
+		System.out.println("Categoria: " + categoria);
+		System.out.println("                                                     ");
+		
 	}
-
-	public void setDataVencimento(String dataVencimento) {
-		this.dataVencimento = dataVencimento;
-	}
-
-	public String getMarca() {
-		return marca;
-	}
-
-	public void setMarca(String marca) {
-		this.marca = marca;
-	}
+	
+	
 
 }
