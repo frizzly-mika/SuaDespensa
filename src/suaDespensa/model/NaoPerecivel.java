@@ -2,19 +2,19 @@ package suaDespensa.model;
 
 public class NaoPerecivel extends Produto {
 	
-	private boolean grao;
+	private boolean processado;
 	
-	public NaoPerecivel(String nome, int qtd, int categoria) {
+	public NaoPerecivel(String nome, int qtd, int categoria, int tipo) {
 		super(nome, qtd, categoria);
-		this.grao = grao;
+		this.processado = processado;
 	}
 
-	public boolean isGrao() {
-		return grao;
+	public boolean isProcessado() {
+		return processado;
 	}
 
-	public void setGrao(boolean grao) {
-		this.grao = grao;
+	public void setProcessado(boolean processado) {
+		this.processado = processado;
 	}
 
 }

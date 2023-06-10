@@ -5,7 +5,7 @@ public class Bebida extends Produto {
 	private int tipo;
 	private boolean alcoolico;
 
-	public Bebida(String nome, int qtd, int categoria) {
+	public Bebida(String nome, int qtd, int categoria, int tipo) {
 		super(nome, qtd, categoria);
 		this.tipo = tipo;
 		this.alcoolico = alcoolico;
@@ -27,5 +27,7 @@ public class Bebida extends Produto {
 	public void setAlcoolico(boolean alcoolico) {
 		this.alcoolico = alcoolico;
 	}
+	
+	
 
 }

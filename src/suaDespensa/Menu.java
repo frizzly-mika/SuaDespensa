@@ -2,6 +2,7 @@ package suaDespensa;
 
 import java.util.Scanner;
 
+import Controller.Controller;
 import suaDespensa.model.Bebida;
 import suaDespensa.model.NaoPerecivel;
 
@@ -9,17 +10,21 @@ import suaDespensa.model.NaoPerecivel;
 public class Menu {
 	public static void main(String[] args) {
 		
-		Bebida b1 = new Bebida("Whiskey", 1, 2);
+		Controller produtos = new Controller();
+		
+		/*Bebida b1 = new Bebida("Água", 2, 1, 1);
 		b1.mostrar();
 		
 		NaoPerecivel np1 = new NaoPerecivel("Arroz", 2, 1);
-		np1.mostrar();
+		np1.mostrar();*/
 
 		Scanner leia = new Scanner(System.in);
 
 		System.out.println("    Bem vinde a Sua Despensa! O que deseja fazer?     ");
 
-		int opcao;
+		int opcao, qtd, categoria, tipo;
+		String nome;
+		Boolean alcoolico, processado;
 
 		while (true) {
 
@@ -49,11 +54,36 @@ public class Menu {
 			switch (opcao) {
 			case 1:
 				System.out.println("Mostrar ítens na Despensa\n\n");
+				produtos.listarTodas();
 
 				break;
 			case 2:
 				System.out.println("Cadastrar ítens\n\n");
-
+				
+				System.out.println("Digite o nome do produto: ");
+				leia.skip("\\R?");
+				nome = leia.nextLine();
+				System.out.println("Digite a quantidade: ");
+				qtd = leia.nextInt();
+				
+				do {
+					System.out.println("Digite a categoria do produto (1 - Não Perecível ou 2 - Bebida): ");
+					categoria = leia.nextInt();
+				} while(categoria < 1 && categoria > 2);
+				
+				switch(categoria) {
+					case 1:
+						System.out.println("Digite o tipo do produto (1 - Não Processado ou 2 - Processado): ");
+						tipo = leia.nextInt();
+						produtos.cadastrar(new NaoPerecivel(nome, qtd, categoria, tipo));
+						
+					break;
+					case 2:
+						System.out.println("Digite o tipo do produto (1 - Não Alcoólico ou 2 - Alcoólico): ");
+						tipo = leia.nextInt();
+						produtos.cadastrar(new Bebida(nome, qtd, categoria, tipo));
+					break;
+				}
 				break;
 			case 3:
 				System.out.println("Retirar ítens\n\n");
