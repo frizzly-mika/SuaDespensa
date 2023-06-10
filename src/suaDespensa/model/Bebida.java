@@ -5,10 +5,10 @@ public class Bebida extends Produto {
 	private int tipo;
 	private boolean alcoolico;
 
-	public Bebida(String nome, int qtd, int categoria, int tipo) {
-		super(nome, qtd, categoria);
+	public Bebida(int numero, String nome, int qtd, int categoria, int tipo) {
+		super(numero, nome, qtd, categoria);
 		this.tipo = tipo;
-		this.alcoolico = alcoolico;
+		//this.alcoolico = alcoolico;
 		
 	}
 

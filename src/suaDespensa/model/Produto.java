@@ -2,14 +2,25 @@ package suaDespensa.model;
 
 public class Produto {
 
+	private int numero;
 	private String nome;
 	private int qtd;
 	private int categoria;
 
-	public Produto(String nome, int qtd, int categoria) {
+	public Produto(int numero, String nome, int qtd, int categoria) {
+		
+		this.numero = numero;
 		this.nome = nome;
 		this.qtd = qtd;
 		this.categoria = categoria;
+	}
+	
+	public int getNumero() {
+		return numero;
+	}
+	
+	public void setNumero(int numero) {
+		this.numero = numero;
 	}
 
 	public String getNome() {
@@ -37,7 +48,7 @@ public class Produto {
 	}
 	
 	
-	public void mostrar() {
+	public void visualizar() {
 		
 		String categoria = "";
 		
@@ -56,6 +67,7 @@ public class Produto {
 		System.out.println("                                                     ");
 		System.out.println("*****************************************************");
 		System.out.println("                                                     ");
+		System.out.println("Nº do ítem: " + this.numero);
 		System.out.println("Nome: " + this.nome);
 		System.out.println("Qtd: " + this.qtd);
 		System.out.println("Categoria: " + categoria);

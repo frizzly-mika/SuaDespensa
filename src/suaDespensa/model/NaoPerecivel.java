@@ -4,9 +4,9 @@ public class NaoPerecivel extends Produto {
 	
 	private boolean processado;
 	
-	public NaoPerecivel(String nome, int qtd, int categoria, int tipo) {
-		super(nome, qtd, categoria);
-		this.processado = processado;
+	public NaoPerecivel(int numero, String nome, int qtd, int categoria, int tipo) {
+		super(numero, nome, qtd, categoria);
+	//	this.processado = processado;
 	}
 
 	public boolean isProcessado() {
