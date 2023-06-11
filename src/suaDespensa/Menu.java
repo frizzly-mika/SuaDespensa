@@ -5,6 +5,7 @@ import java.util.Scanner;
 import Controller.Controller;
 import suaDespensa.model.Bebida;
 import suaDespensa.model.NaoPerecivel;
+import suaDespensa.util.Cores;
 
 public class Menu {
 	public static void main(String[] args) {
@@ -33,7 +34,8 @@ public class Menu {
 
 		while (true) {
 
-			System.out.println("*****************************************************");
+			System.out.println(Cores.TEXT_BLUE_BOLD + Cores.ANSI_BLACK_BACKGROUND
+					+ "*****************************************************");
 			System.out.println("                                                     ");
 			System.out.println("                    Sua Despensa                     ");
 			System.out.println("                                                     ");
@@ -48,7 +50,7 @@ public class Menu {
 			System.out.println("                                                     ");
 			System.out.println("*****************************************************");
 			System.out.println("Entre com a opção desejada:                          ");
-			System.out.println("                                                     ");
+			System.out.println("                                                     " + Cores.TEXT_RESET);
 
 			opcao = leia.nextInt();
 
