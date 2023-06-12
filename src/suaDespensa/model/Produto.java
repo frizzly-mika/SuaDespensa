@@ -62,18 +62,9 @@ public abstract class Produto {
 
 		System.out.println("*****************************************************");
 		System.out.println("                                                     ");
-		System.out.println("                    Ítens na Sua Despensa                     ");
-		System.out.println("                                                     ");
-		System.out.println("*****************************************************");
-		System.out.println("                                                     ");
 		System.out.println("Nº do ítem: " + this.numero);
 		System.out.println("Nome: " + this.nome);
 		System.out.println("Qtd: " + this.qtd);
-		System.out.println("Categoria: " + categoria);
-		System.out.println("                                                     ");
-		// verificar imprimir tipo
-
+		System.out.println("Categoria: " + categoria + "\n");
 	}
-
-	// verificar imprimir tipo
 }

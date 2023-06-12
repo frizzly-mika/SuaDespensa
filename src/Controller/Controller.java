@@ -17,7 +17,7 @@ public class Controller implements Repository {
 		if (produto != null)
 			produto.visualizar();
 		else
-			System.out.println("\nO ítem nº: " + numero + " não foi encontrado.");
+			System.out.println("\nO item nº: " + numero + " não foi encontrado.\n");
 	}
 
 	@Override
@@ -32,7 +32,7 @@ public class Controller implements Repository {
 	@Override
 	public void criarItem(Produto produto) {
 		listaProdutos.add(produto);
-		System.out.println("\nO ítem nº: " + produto.getNumero() + " foi criado com suceesso!");
+		System.out.println("\nO item nº: " + produto.getNumero() + " foi cadastrado com suceesso!\n");
 	}
 
 	@Override
@@ -41,9 +41,9 @@ public class Controller implements Repository {
 
 		if (buscaItem != null) {
 			listaProdutos.set(listaProdutos.indexOf(buscaItem), produto);
-			System.out.println("\nO ítem nº: " + produto.getNumero() + " foi atualizado com sucesso!");
+			System.out.println("\nO item nº: " + produto.getNumero() + " foi atualizado com sucesso!\n");
 		} else
-			System.out.println("\nO ítem nº: " + produto.getNumero() + " não foi encontrado.");
+			System.out.println("\nO item nº: " + produto.getNumero() + " não foi encontrado.\n");
 
 	}
 
@@ -53,9 +53,9 @@ public class Controller implements Repository {
 
 		if (produto != null) {
 			if (listaProdutos.remove(produto) == true)
-				System.out.println("\nO ítem nº: " + numero + " foi apagado com sucesso!");
+				System.out.println("\nO item nº: " + numero + " foi apagado com sucesso!\n");
 		} else
-			System.out.println("\nO ítem nº " + numero + " não foi encontrado.");
+			System.out.println("\nO item nº " + numero + " não foi encontrado.\n");
 
 	}
 
@@ -73,13 +73,12 @@ public class Controller implements Repository {
 		return null;
 	}
 
-	public int retornaCategoria(int numero) {
+	public void retornaCategoria(int numero) {
 		for (var produto : listaProdutos) {
 			if (produto.getNumero() == numero) {
-				return produto.getCategoria();
+				return;
 			}
 		}
-		return 0;
-	}
 
+	}
 }
