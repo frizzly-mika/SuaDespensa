@@ -1,4 +1,4 @@
-package Controller;
+package controller;
 
 import java.util.ArrayList;
 
@@ -72,7 +72,16 @@ public class Controller implements Repository {
 
 		return null;
 	}
-
+	
+	public Produto buscarNaCollectionNome(String nome) {
+		for (var produto : listaProdutos) {
+			if (produto.getNome().equalsIgnoreCase(nome)) {
+				return produto;
+			}
+		}
+		return null;
+	}
+	
 	public void retornaCategoria(int numero) {
 		for (var produto : listaProdutos) {
 			if (produto.getNumero() == numero) {
