@@ -1,4 +1,4 @@
-package controller;
+package suaDespensa.controller;
 
 import java.util.ArrayList;
 
@@ -88,6 +88,5 @@ public class Controller implements Repository {
 				return;
 			}
 		}
-
 	}
 }
